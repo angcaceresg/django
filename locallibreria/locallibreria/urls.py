@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include		#Se ultiliza para enlazar archivos de url en aplicaciones.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('catalogo/',include('catalogo.urls'))	#Incluye el archivo urls de catalogo
 ]
